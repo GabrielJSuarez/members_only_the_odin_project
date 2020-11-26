@@ -1,4 +1,5 @@
-# frozen_string_literal: true
+# rubocop:disable Layout/LineLength, Style/StringLiterals
+# rubocop:disable  Lint/Syntax
 
 module PostsHelper
   def flash_messages_bootstrap
@@ -20,7 +21,7 @@ module PostsHelper
   end
 
   def navbar_user_session
-    if user_signed_in?
+    return unless user_signed_in?
       content_tag(:li, (link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'), class: 'nav-item')
     else
       content_tag(:li, (link_to 'Sign Up', new_user_registration_path, class: 'nav-link'), class: 'nav-item') +
@@ -41,7 +42,7 @@ module PostsHelper
   end
 
   def show_creation
-    if user_signed_in?
+    return unless user_signed_in?
       content_tag(:div, (render 'posts/profile'), class: 'col-md-3') +
         content_tag(:div, (render 'posts/new-post', post: @post), class: 'col-md-6') +
         content_tag(:div, (render 'posts/members'), class: 'col-md-3')
@@ -49,7 +50,7 @@ module PostsHelper
   end
 
   def post_errors?(post)
-    if post.errors.any?
+    return unless post.errors.any?
       content_tag(:div, nil, class: 'alert alert-danger text-center col-md-4 mx-auto', role: 'alert') do
         content_tag(:h4, "#{pluralize(post.errors.count, 'error')} prohibited this post from being saved: ")
       end
@@ -110,3 +111,7 @@ module PostsHelper
     end
   end
 end
+
+  # rubocop:enable  Lint/Syntax
+
+  # rubocop:enable Layout/LineLength, Style/StringLiterals
