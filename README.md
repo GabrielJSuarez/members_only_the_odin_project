@@ -12,11 +12,11 @@
 Getting started
 Clone the repository to your local machine
 
-$ git clone https://github.com/GabrielJSuarez/members-only-TOD.git
+$ git clone https://github.com/GabrielJSuarez/members_only_the_odin_project.git
 
 Go to your directory
 
-$ `cd members-only`
+$ `cd members_only_the_odin_project
 
 Run in terminal [You must have Ruby installed on your system.]
 
