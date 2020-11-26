@@ -20,7 +20,7 @@ module PostsHelper
   end
 
   def navbar_user_session
-    return unless user_signed_in?
+    if user_signed_in?
       content_tag(:li, (link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'), class: 'nav-item')
     else
       content_tag(:li, (link_to 'Sign Up', new_user_registration_path, class: 'nav-link'), class: 'nav-item') +
