@@ -45,7 +45,6 @@ module PostsHelper
       content_tag(:div, (render 'posts/profile'), class: 'col-md-3') +
         content_tag(:div, (render 'posts/new-post', post: @post), class: 'col-md-6') +
         content_tag(:div, (render 'posts/members'), class: 'col-md-3')
-    end
   end
 
   def post_errors?(post)
@@ -53,7 +52,6 @@ module PostsHelper
       content_tag(:div, nil, class: 'alert alert-danger text-center col-md-4 mx-auto', role: 'alert') do
         content_tag(:h4, "#{pluralize(post.errors.count, 'error')} prohibited this post from being saved: ")
       end
-    end
   end
 
   def show_posts(posts)
