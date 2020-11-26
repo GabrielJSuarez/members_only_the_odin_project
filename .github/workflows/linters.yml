@@ -8,12 +8,12 @@ env:
 jobs:
   rubocop:
     name: Rubocop
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.7.x
       - name: Setup Rubocop
         run: |
           gem install --no-document rubocop:'~>0.81.0' # https://docs.rubocop.org/en/stable/installation/
@@ -22,7 +22,7 @@ jobs:
         run: rubocop --color
   stylelint:
     name: Stylelint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
