@@ -1,0 +1,13 @@
+ <%= simple_form_for @post do |f| %>
+    <div class="media text-center">
+      <div class="media-body">
+        <h5 class="mt-0 font-weight-bold">
+          @<%= member?(current_user.name) %> <span class="badge badge-primary">member</span>
+        </h5>
+        <%= f.input :content, label: 'Enter your secret', label_html: { class: 'text-center font-weight-bold content-font'}, input_html: { rows: '5' } %>
+        <div class="text-center">
+          <%= f.button :submit , class: 'btn btn-primary btn-lg my-3' %>
+        </div>
+      </div>
+    </div>
+ <% end %>
