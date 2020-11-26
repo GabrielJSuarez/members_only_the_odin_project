@@ -27,6 +27,18 @@ module PostsHelper
           content_tag(:li, (link_to 'Sign In', new_user_session_path, class: 'nav-link'), class: 'nav-item')
       end
     end
+
+    def show_jumbotron
+      if !user_signed_in?
+        content_tag(:div, nil, class: 'jumbotron') do
+          content_tag(:h1, 'Welcome to the secret\'s den', class: 'display-4 text-danger font-weight-bolder') +
+          content_tag(:p, 'Sign up or Log in to see the keepers of the secrets!', class: 'lead') +
+          content_tag(:hr, nil, class: 'my-4') +
+          content_tag(:p, 'Check the hottets gossips, click below', class: 'font-weight-bold') + 
+          content_tag(:p, (link_to 'Register Now!', new_user_registration_path, class: 'btn btn-primary btn-lg text-light', role: 'button'), class: 'lead')
+        end
+      end
+    end
   
     def show_creation
       if user_signed_in?
