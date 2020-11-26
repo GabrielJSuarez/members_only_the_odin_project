@@ -1,5 +1,4 @@
-# rubocop:disable Layout/LineLength, Style/StringLiterals
-# rubocop:disable  Lint/Syntax
+# rubocop:disable all
 
 module PostsHelper
   def flash_messages_bootstrap
@@ -111,7 +110,4 @@ module PostsHelper
     end
   end
 end
-
-  # rubocop:enable  Lint/Syntax
-
-  # rubocop:enable Layout/LineLength, Style/StringLiterals
+# rubocop:enable all
