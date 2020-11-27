@@ -1,24 +1,67 @@
 # README
+# Project: Members only!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Build with: 
 
-Things you may want to cover:
+- Bootstrap 4 css implementation for Rails
+- Simple Forms Gem
+- Better Errors Gem
+- Guard Gem
+- Devise Gem
 
-* Ruby version
+Getting started
+Clone the repository to your local machine
 
-* System dependencies
+$ git clone https://github.com/GabrielJSuarez/members_only_the_odin_project.git
 
-* Configuration
+Go to your directory
 
-* Database creation
+$ `cd members_only_the_odin_project
 
-* Database initialization
+Run in terminal [You must have Ruby installed on your system.]
 
-* How to run the test suite
+$ `bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+Install the Bootstrap Dependencies Locally to show the bootstrap styling
 
-* Deployment instructions
+$ `yarn add bootstrap@4.3.1 jquery popper.js`
 
-* ...
+the command bundle install is important to install required gem for the game to start. After you finish type:
+
+$ `rails db:migrate`
+
+This will do the proper migrations for the database, after that you can run the server:
+
+$ `rails server`
+
+Open your browser to localhost
+
+http://localhost:3000/
+
+Run tests
+Rubocop lint
+
+rubocop .
+
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the issues page.
+
+Contact
+Project Link:https://github.com/GabrielJSuarez/Micro_Reddit_Microverse_TOD
+
+## Authors
+
+👤 **Gabriel Suárez**
+
+- Github: @ginnandjuice(https://github.com/ginnandjuice)
+- Twitter: [@fatbaxxter](https://twitter.com/fatbaxxter)
+- Linkedin: [Gabriel Suárez](https://www.linkedin.com/in/gabriel-ginn-suarez/)
+
+
+Show your support
+Give a ⭐️ if you like this project!
+
+📝 License
+This project is MIT licensed.
