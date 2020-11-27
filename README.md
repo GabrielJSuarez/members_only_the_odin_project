@@ -28,6 +28,10 @@ $ `yarn add bootstrap@4.3.1 jquery popper.js`
 
 the command bundle install is important to install required gem for the game to start. After you finish type:
 
+$ `rails db:migrate`
+
+This will do the proper migrations for the database, after that you can run the server:
+
 $ `rails server`
 
 Open your browser to localhost
