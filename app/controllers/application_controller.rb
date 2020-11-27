@@ -3,10 +3,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  # rubocop:disable Layout/LineLength
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name username email password password_confirmation])
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[name username email password password_confirmation current_password])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name username])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name username])
   end
-  # rubocop:enable Layout/LineLength
 end
