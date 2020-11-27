@@ -6,6 +6,10 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "test/**/*"
+    - "app/**/*"
+    - "config.ru"
+    - "Gemfile"
 
   DisplayCopNames: true
 
