@@ -5,7 +5,7 @@
 
 - Bootstrap 4 css implementation for Rails
 - Simple Forms Gem
-- Better Erros Gem
+- Better Errors Gem
 - Guard Gem
 - Devise Gem
 
@@ -20,7 +20,7 @@ $ `cd members_only_the_odin_project
 
 Run in terminal [You must have Ruby installed on your system.]
 
-$ `ruby bundle install`
+$ `bundle install`
 
 Install the Bootstrap Dependencies Locally to show the bootstrap styling
 
